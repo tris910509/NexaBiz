@@ -1,0 +1,154 @@
+:root {
+    --primary: #1F3C88;
+    --secondary: #00C2FF;
+    --accent: #22E38A;
+    --dark: #0F172A;
+    --gray: #64748B;
+    --light: #F8FAFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, var(--primary), var(--dark));
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: rgba(255,255,255,0.15);
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user {
+    background: var(--secondary);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+/* STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.card.accent p {
+    color: var(--accent);
+}
+
+/* CONTENT */
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.panel h2 {
+    margin-bottom: 15px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.success {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.pending {
+    color: orange;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: none;
+    }
+}
