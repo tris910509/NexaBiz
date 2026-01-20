@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>NexaBiz Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">Nexa<span>Biz</span></div>
+    <nav>
+        <a class="active">Dashboard</a>
+        <a>POS</a>
+        <a>E-Commerce</a>
+        <a>Jasa</a>
+        <a>Booking</a>
+        <a>Inventory</a>
+        <a>Customer</a>
+        <a>Finance</a>
+        <a>Analytics</a>
+        <a>Settings</a>
+    </nav>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+    
+    <!-- HEADER -->
+    <header class="topbar">
+        <h1>Dashboard</h1>
+        <div class="user">Admin</div>
+    </header>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="card">
+            <h3>Total Sales</h3>
+            <p>Rp 125.000.000</p>
+        </div>
+        <div class="card">
+            <h3>Orders</h3>
+            <p>1.240</p>
+        </div>
+        <div class="card">
+            <h3>Services</h3>
+            <p>320</p>
+        </div>
+        <div class="card accent">
+            <h3>Active Customers</h3>
+            <p>980</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content">
+        <div class="panel">
+            <h2>Recent Transactions</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>15 Jan</td>
+                    <td>POS</td>
+                    <td>Rp 2.500.000</td>
+                    <td class="success">Paid</td>
+                </tr>
+                <tr>
+                    <td>15 Jan</td>
+                    <td>Service</td>
+                    <td>Rp 1.200.000</td>
+                    <td class="pending">Process</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="panel">
+            <h2>Service Schedule</h2>
+            <ul>
+                <li>Cleaning Service – 10:00</li>
+                <li>IT Maintenance – 13:00</li>
+                <li>Consulting – 15:30</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
