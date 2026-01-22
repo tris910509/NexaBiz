@@ -1,29 +1,36 @@
-// Statistik dummy
-let totalSales = 125000000;
-let orders = 342;
-
+// KPI
 document.getElementById("sales").innerText =
-    "Rp " + totalSales.toLocaleString("id-ID");
+"Rp " + (245000000).toLocaleString("id-ID");
+document.getElementById("orders").innerText = 428;
 
-document.getElementById("orders").innerText = orders;
-
-// Produk
-const products = [
-    { name: "Kaos Premium", price: 120000, stock: 45 },
-    { name: "Headset Bluetooth", price: 350000, stock: 18 },
-    { name: "Mainan Edukasi", price: 95000, stock: 60 },
-    { name: "Pulsa & Tagihan", price: 0, stock: "Unlimited" }
+// Orders
+const orders = [
+ {id:"NB-001",name:"Andi",total:450000,status:"success"},
+ {id:"NB-002",name:"Sari",total:125000,status:"pending"},
+ {id:"NB-003",name:"Budi",total:780000,status:"success"}
 ];
 
-const table = document.getElementById("productTable");
-
-products.forEach(p => {
-    const row = `
-        <tr>
-            <td>${p.name}</td>
-            <td>Rp ${p.price.toLocaleString("id-ID")}</td>
-            <td>${p.stock}</td>
-        </tr>
-    `;
-    table.innerHTML += row;
+const table = document.getElementById("orderTable");
+orders.forEach(o=>{
+    table.innerHTML+=`
+    <tr>
+        <td>${o.id}</td>
+        <td>${o.name}</td>
+        <td>Rp ${o.total.toLocaleString("id-ID")}</td>
+        <td><span class="status ${o.status}">
+        ${o.status}</span></td>
+    </tr>`;
 });
+
+// Chart (simple canvas)
+const canvas=document.getElementById("salesChart");
+const ctx=canvas.getContext("2d");
+canvas.height=200;
+
+const data=[120,160,140,180,210,260];
+ctx.beginPath();
+ctx.moveTo(20,180-data[0]);
+data.forEach((v,i)=>ctx.lineTo(20+i*60,180-v));
+ctx.strokeStyle="#1F3C88";
+ctx.lineWidth=3;
+ctx.stroke();
