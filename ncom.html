@@ -1,70 +1,155 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>NexaBiz Dashboard</title>
-    <link rel="stylesheet" href="ncom.css">
+  <meta charset="UTF-8">
+  <title>NexaBiz | Run Your Business, Smarter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h2 class="logo">NexaBiz</h2>
+<!-- HEADER -->
+<header class="navbar">
+  <div class="container">
+    <div class="logo">Nexa<span>Biz</span></div>
+    <nav>
+      <a href="#features">Fitur</a>
+      <a href="#pricing">Harga</a>
+      <a href="#contact">Kontak</a>
+      <button class="btn-primary">Get Started</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>Run Your Business, Smarter</h1>
+      <p>
+        Aplikasi bisnis terpadu untuk POS, E-Commerce,
+        dan Service Management. Kelola bisnis lebih cepat,
+        aman, dan profesional.
+      </p>
+      <div class="hero-btn">
+        <button class="btn-primary">Coba Gratis</button>
+        <button class="btn-secondary">Request Demo</button>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="banner.png" alt="NexaBiz App">
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+  <div class="container">
+    <h2>Fitur Unggulan NexaBiz</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>POS Pintar</h3>
+        <p>Transaksi cepat, multi kasir, QRIS & laporan real-time.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>E-Commerce</h3>
+        <p>Toko online terintegrasi langsung dengan POS.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Service Management</h3>
+        <p>Kelola jasa, tiket service, teknisi & invoice.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Analytics</h3>
+        <p>Dashboard grafik & laporan keuangan otomatis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container">
+    <h2>Kenapa Memilih NexaBiz?</h2>
+    <ul>
+      <li>✔ Satu aplikasi untuk semua bisnis</li>
+      <li>✔ Mudah digunakan & cloud-based</li>
+      <li>✔ Cocok UMKM hingga Enterprise</li>
+      <li>✔ Support profesional</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+  <div class="container">
+    <h2>Paket Harga</h2>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <h4>Gratis</h4>
         <ul>
-            <li class="active">Dashboard</li>
-            <li>Produk</li>
-            <li>Pesanan</li>
-            <li>Pelanggan</li>
-            <li>Laporan</li>
-            <li>Pengaturan</li>
+          <li>POS Basic</li>
+          <li>1 User</li>
+          <li>Laporan Dasar</li>
         </ul>
-    </aside>
+        <button class="btn-primary">Mulai</button>
+      </div>
 
-    <!-- Main -->
-    <main class="main">
-        <header class="header">
-            <h1>Dashboard</h1>
-            <span class="user">Admin</span>
-        </header>
+      <div class="price-card highlight">
+        <h3>Business</h3>
+        <h4>Rp149.000 / bulan</h4>
+        <ul>
+          <li>POS + E-Commerce</li>
+          <li>Multi User</li>
+          <li>Laporan Lengkap</li>
+        </ul>
+        <button class="btn-primary">Pilih</button>
+      </div>
 
-        <!-- Stats -->
-        <section class="stats">
-            <div class="card">
-                <h3>Total Penjualan</h3>
-                <p id="sales">Rp 0</p>
-            </div>
-            <div class="card">
-                <h3>Pesanan</h3>
-                <p id="orders">0</p>
-            </div>
-            <div class="card">
-                <h3>Produk</h3>
-                <p>128</p>
-            </div>
-            <div class="card">
-                <h3>Pelanggan</h3>
-                <p>542</p>
-            </div>
-        </section>
+      <div class="price-card">
+        <h3>Enterprise</h3>
+        <h4>Custom</h4>
+        <ul>
+          <li>Multi Outlet</li>
+          <li>Integrasi API</li>
+          <li>Support Khusus</li>
+        </ul>
+        <button class="btn-primary">Hubungi Kami</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Products -->
-        <section class="table-section">
-            <h2>Produk Terlaris</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Produk</th>
-                        <th>Harga</th>
-                        <th>Stok</th>
-                    </tr>
-                </thead>
-                <tbody id="productTable"></tbody>
-            </table>
-        </section>
-    </main>
-</div>
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Siap Menjalankan Bisnis Lebih Cerdas?</h2>
+    <button class="btn-primary">Get Started Free</button>
+  </div>
+</section>
 
-<script src="ncom.js"></script>
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="container footer-grid">
+    <div>
+      <h3>NexaBiz</h3>
+      <p>Unified Business App untuk POS, E-Commerce & Service.</p>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <p>Email: support@nexabiz.id</p>
+      <p>WhatsApp: 08xxxxxxx</p>
+    </div>
+  </div>
+  <p class="copyright">© 2026 NexaBiz. All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
-</html>
+    </html>
